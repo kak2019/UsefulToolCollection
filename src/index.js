@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Home from "./home";
+
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+//import ProgressChart from "./progress";
+import Show from "./multiprogress";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
@@ -13,6 +16,7 @@ root.render(
                 <Route path="/app" element={<App />} />
                 {/* Add more Route components here for additional paths */}
                 <Route path = "/" element={<Home/>}></Route>
+                <Route path = "/progress" element={<Show/>} ></Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

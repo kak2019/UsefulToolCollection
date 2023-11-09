@@ -18,7 +18,9 @@ function Home() {
         // </Router>
         <div>
             <h1>HomePage</h1>
-            <Button type="primary" onClick={()=> {document.location.href="/app"}}>Button</Button>
+            <Button type="primary" onClick={()=> {document.location.href="/app"}}>app</Button>
+            <Button type="primary" onClick={()=> {document.location.href="/progress"}}>Progress</Button>
+
             {/* 其他组件和内容 */}
 
         </div>
