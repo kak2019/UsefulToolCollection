@@ -4,21 +4,9 @@ import {Button} from 'antd';
 // import HomePage from './html1.html';
 // import AboutPage from './html2.html';
 // 其他必要的imports
-import TimeLine from "./stepTimeLine";
-const A= [
-    {
-        title: 'Step 1',
-        description: <div>'This is the description for Step 1.'</div>,
-    },
-    {
-        title: 'Step 2',
-        description: 'Step 2 has its own unique description.',
-    },
-    {
-        title: 'Step 3',
-        description: 'Finally, this is the third step description.',
-    },]
-function App() {
+
+
+function Home() {
 
     return (
         // <Router>
@@ -29,13 +17,13 @@ function App() {
         //     </Switch>
         // </Router>
         <div>
-            <h1>我的单页应用</h1>
-            <Button type="primary">Button</Button>
+            <h1>HomePage</h1>
+            <Button type="primary" onClick={()=> {document.location.href="/app"}}>Button</Button>
             {/* 其他组件和内容 */}
-            <TimeLine items = {A}></TimeLine>
+
         </div>
     );
 }
 
 
-export default App;
+export default Home;
