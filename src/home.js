@@ -40,6 +40,7 @@ function Home() {
             {/*<h1>HomePage</h1>*/}
             <Button type="primary" onClick={()=> {document.location.href="/app"}}>app</Button>
             <Button type="primary" onClick={()=> {document.location.href="/progress"}}>Progress</Button>
+            <Button type="primary" onClick={()=> {document.location.href="/Select"}}>Select</Button>
 
             {/* 其他组件和内容 */}
 

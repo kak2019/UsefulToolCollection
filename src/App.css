@@ -46,14 +46,14 @@
   animation: fallDown 2s forwards; /* 使用动画 */
 }
 
-@keyframes fallDown {
-  from {
-    top: -100px; /* 开始位置 */
-  }
-  to {
-    top: 90vh; /* 结束位置，视视口高度而定 */
-  }
-}
+/*@keyframes fallDown {*/
+/*  from {*/
+/*    top: -100px; !* 开始位置 *!*/
+/*  }*/
+/*  to {*/
+/*    top: 90vh; !* 结束位置，视视口高度而定 *!*/
+/*  }*/
+/*}*/
 
 .star {
   width: 1px;
@@ -67,7 +67,8 @@
 @keyframes fallDown {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    /*transform: translateY(-10px);*/
+    transform: translate(-10px,-10px);
   }
   10% {
     opacity: 1;
@@ -76,7 +77,8 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(90vh);
+    /*transform: translateY(90vh);*/
+    transform: translate(90vh,90vh);
     opacity: 0;
   }
 }
