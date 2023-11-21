@@ -1,10 +1,13 @@
 .App {
   text-align: center;
+  overflow-x: hidden; /* 防止横向滚动条 */
+  overflow-y: hidden;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: fallDown 1s infinite; /* 应用新的动画 */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,15 +39,7 @@
     transform: rotate(360deg);
   }
 }
-#fallingDiv {
-  width: 1px;
-  height: 10px;
-  background-color: red;
-  position: absolute;
-  top: -100px; /* 初始位置在屏幕外 */
-  color: red;
-  animation: fallDown 2s forwards; /* 使用动画 */
-}
+
 
 /*@keyframes fallDown {*/
 /*  from {*/
@@ -60,7 +55,7 @@
   height: 10px;
   background-color: #EAEDF3;
   position: absolute;
-  top: -10px; /* 初始位置在屏幕外 */
+  top: 10px; /* 初始位置在屏幕外 */
   animation: fallDown 3s infinite; /* 循环动画 */
 }
 
@@ -68,7 +63,7 @@
   0% {
     opacity: 0;
     /*transform: translateY(-10px);*/
-    transform: translate(-10px,-10px);
+    transform: translate(0px,0px);
   }
   10% {
     opacity: 1;
@@ -78,7 +73,7 @@
   }
   100% {
     /*transform: translateY(90vh);*/
-    transform: translate(90vh,90vh);
+    transform: translate(90vh,90vw);
     opacity: 0;
   }
 }

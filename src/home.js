@@ -14,7 +14,7 @@ function Home() {
         for (let i = 0; i < 100; i++) {
             const star = document.createElement('div');
             star.className = 'star';
-            star.style.left = `${Math.random() * 100}vw`;
+            star.style.left = `${Math.random() * 80}vw`;
             star.style.animationDelay = `${Math.random() * 3}s`;
 
             container.appendChild(star);
@@ -32,8 +32,8 @@ function Home() {
         <>
         <div style={{
             backgroundImage: `url(${backgroundImage})`,
-            backgroundSize: 'cover', // 覆盖整个容器
-            backgroundPosition: 'center', // 图片居中
+            backgroundSize: 'auto', // 覆盖整个容器
+            backgroundPosition: 'cover', // 图片居中
             height: '100vh', // 容器高度
             width: '100vw' // 容器宽度
         }}>
@@ -41,11 +41,12 @@ function Home() {
             <Button type="primary" onClick={()=> {document.location.href="/app"}}>app</Button>
             <Button type="primary" onClick={()=> {document.location.href="/progress"}}>Progress</Button>
             <Button type="primary" onClick={()=> {document.location.href="/Select"}}>Select</Button>
+            <Button type="primary" onClick={()=> {document.location.href="../learn/index.html"}}>芜湖</Button>
 
             {/* 其他组件和内容 */}
 
         </div>
-    <div id="fallingDiv"></div>
+
         </>
     );
 }
