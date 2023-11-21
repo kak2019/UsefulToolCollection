@@ -45,7 +45,7 @@ function Home() {
             {/* 其他组件和内容 */}
 
         </div>
-    <div id="fallingDiv">111</div>
+    <div id="fallingDiv"></div>
         </>
     );
 }
