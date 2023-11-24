@@ -42,7 +42,7 @@ function Home() {
             <Button type="primary" onClick={()=> {document.location.href="/progress"}}>Progress</Button>
             <Button type="primary" onClick={()=> {document.location.href="/Select"}}>Select</Button>
             <Button type="primary" onClick={()=> {document.location.href="../learn/index.html"}}>芜湖</Button>
-
+            <Button type="primary" onClick={()=> {document.location.href="../chart.html"}}>芜湖</Button>
             {/* 其他组件和内容 */}
 
         </div>

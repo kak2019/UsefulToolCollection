@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>小荷包数据图表</title>
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+
+    <!-- 引入 Ant Design Plots -->
+    <script src="https://unpkg.com/@ant-design/plots"></script>
+</head>
+<body>
+<div id="container"></div>
+<!-- 您的 React 代码 -->
+<script type="text/babel">
+    // 在这里插入上面的 React 代码
+    import React, { useState, useEffect } from 'react';
+    import ReactDOM from 'react-dom';
+    import { Line } from '@ant-design/plots';
+   const a =  [
+        {
+            "Date": "2023.5.10",
+            "Income": 200,
+            "Expense": 0
+        },
+        {
+            "Date": "2023.6.10",
+            "Income": 20,
+            "Expense": 0
+        },
+        {
+            "Date": "2023.7.10",
+            "Income": 1040,
+            "Expense": 497
+        },
+        {
+            "Date": "2023.8.10",
+            "Income": 372,
+            "Expense": 915
+        },
+        {
+            "Date": "2023.9.10",
+            "Income": 1406.38,
+            "Expense": 1039.3
+        },
+        {
+            "Date": "2023.10.10",
+            "Income": 900.18,
+            "Expense": 634.09
+        },
+        {
+            "Date": "2023.11.10",
+            "Income": 835.63,
+            "Expense": 1683.19
+        }
+    ];
+    const DemoLine = () => {
+        const [data, setData] = useState([]);
+
+        useEffect(() => {
+            // 此处应替换为您的数据源，比如本地文件或API
+            fetch(a)
+                .then((response) => response.json())
+                .then((json) => setData(a))
+                .catch((error) => {
+                    console.log('fetch data failed', error);
+                });
+        }, []);
+
+        const config = {
+            autoFit: true,
+            height: 500,
+            data,
+            xField: 'Date',
+            yField: 'Balance',
+            tooltip: {
+                showMarkers: false,
+            },
+        };
+
+        return <Line {...config} />;
+    };
+
+    ReactDOM.render(<DemoLine />, document.getElementById('container'));
+
+</script>
+</body>
+</html>
